@@ -1,85 +1,85 @@
-# Frontend Developer Intern Assignment  
+## Workers Listing App
 
-## Mandatory Tasks
-- Follow SolveEase on [Github](https://github.com/solve-ease) and [Linkedin](https://www.linkedin.com/company/solve-ease)
-- Star this repo
+A modern dark-themed Workers Listing web application built with Next.js, TypeScript, and Tailwind CSS, featuring lazy-loaded cards, service filtering, pagination, and API integration. This project demonstrates a clean UI/UX design and responsive layout for desktop, tablet, and mobile devices.
 
-## Objective  
-This assignment is designed to assess your practical skills in **React, Next.js, TypeScript, Tailwind CSS, and frontend optimizations**. You will work on an existing **Next.js application** that contains layout/design issues and some configuration bugs. Your task is to identify and resolve these issues, and implement the listed features to enhance the overall user experience. 
+## Table of Contents
 
----
+Features
+Tech Stack
+Installation
+API
+Components
+Styling
 
-## Tasks  
 
-### 1. Fix Cards Layout & Responsiveness  
-- Correct the existing card grid layout.  
-- Improve the overall card design (UI/UX sensibility expected).  
-- Ensure the page is fully responsive across devices (desktop, tablet, mobile).  
+# Features
 
-### 2. Add Navbar (Sticky)  
-- Implement a navigation bar that remains fixed at the top while scrolling.  
-- Design should be clean and responsive.  
+1. Dark / Black Theme: Modern dark-themed UI with smooth hover effects.
 
-### 3. Optimize Page Load & Performance  
-- Implement optimizations such as:  
-  - **Lazy loading** for images and non-critical components.  
-  - **Memoization** to avoid unnecessary re-renders.  
-  - **Skeleton loading screens** for better UX during data fetch.  
+2. Lazy Loading: Workers’ images and cards are lazy-loaded for performance.
 
-### 4. Implement Pagination  
-- Add pagination for the workers listing page.  
-- Each page should load a suitable number of items (e.g., 9–12 cards per page).  
+3. Skeleton Loading: Shows skeleton placeholders while fetching data.
 
-### 5. Service Filters  
-- Implement filters for workers based on **price/day** and **type of service**.  
-- Filters should work seamlessly with pagination.  
+4. Filtering: Filter workers by service (Plumbing, Cleaning, Electrician) and price range.
 
-### 6. Bug Fixes  
-- Identify and fix any existing issues in `page.tsx` or configuration files.  
-- Resolve console warnings or errors.  
-- Ensure clean and maintainable code following best practices.  
+5. Pagination: Clean pagination with Next/Prev buttons and only 3 page numbers visible at a time.
 
-### 7. API Integration  
-- Currently, the workers’ data is being imported directly from `workers.json`.  
-- Your task is to **serve this data via /api/wprkers API route**.  
-- Update the frontend page to fetch this data using `fetch` (or any modern method such as `useEffect`, `useSWR`, or React Query).
-- Donot delete the existing data loading logic, comment it out.  
-- Implement:  
-  - **Loading state** (use skeleton screens).  
-  - **Error handling** (show a friendly error message if API fails).  
-  - **Basic caching or memoization** to prevent redundant calls.  
+6. Responsive Design: Fully responsive for mobile, tablet, and desktop.
 
----
+7. API Integration: Fetches workers data from /api/workers endpoint.
 
-## Expectations  
-- Use **TypeScript** and **Tailwind CSS** consistently.  
-- Follow **component-driven development** principles.  
-- Write **clean, readable, and reusable code**.  
-- Optimize for **performance and accessibility**.  
-- Maintain **Git commit history** (no single "final commit").  
+8. Performance Optimizations:
+  useMemo for filtered and paginated data
+  Suspense for lazy-loaded cards
+  Controlled components for filters
 
----
+# Tech Stack
 
-## Deliverables  
-1. Fork the assignment repo, make changes there.
-2. Fill in the Goggle Form with your details for submission.
+Frontend: Next.js (App Router), React, TypeScript
+Styling: Tailwind CSS
+Data: Static JSON (workers.json) served via API route
+Image Handling: Next.js Image component with lazy loading
+Skeleton Loader: react-loading-skeleton
 
----
+#Installation
 
-## Evaluation Criteria  
-- Code quality, readability, and structure.  
-- UI/UX improvements and responsiveness.  
-- Correctness of functionality (filters, pagination, sticky navbar, optimizations).  
-- Debugging and problem-solving approach.  
-- Git usage and commit practices.  
-- Handling of API calls, loading states, and error cases.  
+1. Clone the repository:
 
----
+2. git clone https://github.com/yourusername/workers-listing.git
+3. cd workers-listing
 
-## Notes  
-- You are free to use libraries like **SWR** or **React Query**, but keep the implementation clean.  
-- Focus on **real-world production quality code**, not just quick fixes. 
-- Add comment for any **bug fix or optimization.** 
-- Document any **extra improvements** you make in your submission.
+4. Install dependencies:
+  npm install
+  # or
+  yarn
 
-Good luck 🚀  
+5. Run the development server:
+  npm run dev
+  # or
+  yarn dev
+
+
+Open http://localhost:3000
+ in your browser.
+
+
+API
+
+Route: /api/workers
+Method: GET
+
+
+Handles errors gracefully with proper response messages.
+
+Components
+WorkersCard
+
+1. Dark-themed card component
+2. Lazy-loaded image
+3. Hover overlay showing price/day
+4. Responsive height and hover scale effect
+5. Filters & Pagination
+
+
+
+
